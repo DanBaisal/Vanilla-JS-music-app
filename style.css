@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: black;
 }
 
 .app {
@@ -16,10 +17,12 @@ header h1 {
   margin: 50px 0px 30px 0px;
   text-align: center;
   font-size: 40px;
+  color: white;
 }
 
 header p {
   font-size: 20px;
+  color: white;
 }
 
 .pads {
@@ -31,6 +34,7 @@ header p {
 .pads > div {
   height: 100px;
   width: 100px;
+  flex: 1;
 }
 
 .pad1 {
@@ -55,4 +59,29 @@ header p {
 
 .pad6 {
   background-color: green;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+  }
+}
+
+.visual > div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
 }
